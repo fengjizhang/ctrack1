@@ -7,32 +7,36 @@ function Map() {
 
     const [coordindates, setC] = useState([[],[]]);
 
+    const [currentCoords, setCurrentC] = useState([0.0, 0.0]);
+    
+    if (currentCoords[0] === 0.0) {
+
+        axios.get('http://api.open-notify.org/iss-now.json')
+        .then( (res) => {
+            // handle success
+            console.log(res);
+            // setCurrentC([res.data.iss_position.latitude,res.data.iss_position.longitude]);
+        })
+        .catch((err) => {
+            // handle error
+            console.log(err);
+        })
+
+    }
+    
     //TODO --edit
-    axios.get('/coords')
-    .then( (res) => {
-        // handle success
-        console.log(res);
-        setC(res);
-    })
-    .catch((err) => {
-        // handle error
-        console.log(err);
-    })
-
-
-
     return (
         <div className="headerTop">
             <p>{coordindates}</p>
 
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} className="mapContainer">
+            <MapContainer center={[currentCoords[0], currentCoords[1]]} zoom={5} scrollWheelZoom={true} className="mapContainer">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[51.505, -0.09]}>
+                <Marker position={[currentCoords[0], currentCoords[1]]}>
                     <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Current ISS Location<br /> 
                     </Popup>
                 </Marker>
                 </MapContainer>
