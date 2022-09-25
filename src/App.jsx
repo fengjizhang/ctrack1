@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import { Dialog, Menu, Transition } from '@headlessui/react'
+import { Dialog, Menu, Transition } from '@headlessui/react';
 import {
   Bars3BottomLeftIcon,
   BellIcon,
@@ -10,8 +10,9 @@ import {
   InboxIcon,
   UsersIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+} from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+import Map from './components/Map.jsx';
 
 const navigation = [
   { name: 'All', href: '#', icon: HomeIcon, current: true },
@@ -188,18 +189,7 @@ export default function Example() {
           </div>
 
           <main className="flex-1">
-            <div className="py-6">
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
-              </div>
-              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                {/* Replace with your content */}
-                <div className="py-4">
-                  <div className="h-96 rounded-lg border-4 border-dashed border-gray-200" />
-                </div>
-                {/* /End replace */}
-              </div>
-            </div>
+            <Map />
           </main>
         </div>
       </div>
