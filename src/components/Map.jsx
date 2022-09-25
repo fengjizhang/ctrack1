@@ -11,11 +11,11 @@ function Map(props) {
 
     const processedPosition = [parseInt(currPosition[0]), parseInt(currPosition[1])];
     
-    console.log('batman', processedPosition);
+    console.log('coordinates, chrome console.', processedPosition);
 
     return (
         <div className="headerTop">
-            <MapContainer center={processedPosition} zoom={6} scrollWheelZoom={true} className="mapContainer">
+            <MapContainer center={processedPosition} zoom={2} scrollWheelZoom={true} className="mapContainer">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

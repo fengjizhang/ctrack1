@@ -14,6 +14,7 @@ const MapData = () => {
         axios.get('http://api.open-notify.org/iss-now.json')
         .then( (res) => {
             // handle success
+            console.log('datamap', res);
             setCurrentC([res.data.iss_position.latitude,res.data.iss_position.longitude]);
         })
         .catch((err) => {
