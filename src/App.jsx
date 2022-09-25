@@ -12,7 +12,8 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import Map from './components/Map.jsx';
+import DataMap from './components/DataMap.jsx';
+
 
 const navigation = [
   { name: 'All', href: '#', icon: HomeIcon, current: true },
@@ -36,14 +37,7 @@ export default function Example() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
 
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -189,7 +183,7 @@ export default function Example() {
           </div>
 
           <main className="flex-1">
-            <Map />
+            <DataMap />
           </main>
         </div>
       </div>

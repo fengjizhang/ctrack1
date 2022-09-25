@@ -3,50 +3,29 @@ import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import '../cssFiles/map.css';
 // import issLogo from '../imgFiles/ISS.png';
 
-const axios = require('axios');
 
-function Map() {
 
-    const [currentCoords, setCurrentC] = useState([0.0, 0.0]);
+function Map(props) {
     
-    useEffect( () => {
+    const currPosition = [props.data[0], props.data[1]];
 
-        if (currentCoords[0] === 0.0) {
-
-            axios.get('http://api.open-notify.org/iss-now.json')
-            .then( (res) => {
-                // handle success
-                console.log(res);
-                setCurrentC([res.data.iss_position.latitude,res.data.iss_position.longitude]);
-            })
-            .catch((err) => {
-                // handle error
-                console.log(err);
-            })
+    const processedPosition = [parseInt(currPosition[0]), parseInt(currPosition[1])];
     
-        }
+    console.log('batman', processedPosition);
 
-    })
-
-    
-
-
-
-    //TODO --edit
     return (
         <div className="headerTop">
-            {console.log('test!', currentCoords.toString())}
-            <MapContainer center={currentCoords} zoom={2} scrollWheelZoom={true} className="mapContainer">
+            <MapContainer center={processedPosition} zoom={6} scrollWheelZoom={true} className="mapContainer">
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={currentCoords}>
+                <Marker position={processedPosition}>
                     
                     <Popup>
                     International Space Station<br /> 
-                    Longitude: {currentCoords[0]} <br />
-                    Latitude: {currentCoords[1]}
+                    Longitude: {currPosition[0]} <br />
+                    Latitude: {currPosition[1]}
                     </Popup>
                 </Marker>
                 </MapContainer>
