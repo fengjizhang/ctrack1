@@ -1,5 +1,7 @@
 # Getting Started with CTrack. 
 
+-GUI overhaul in progress-
+
 This project is a work in progress...
 CTrack visualizes the path, past and future, of objects in the sky/space on a map. 
 When complete, it stores data of objects in flight, which could be anything: the international space station, meteroids, or planes. And from the past data, it should calculate the future trajectory, display their path and location on a map. Theoretically, the object should be fast moving in order to produce a calculatable path. 
