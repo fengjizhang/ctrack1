@@ -1,4 +1,4 @@
-import {  useState, Fragment } from 'react'
+import {  useState, Fragment, useEffect } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import {
   Bars3BottomLeftIcon,
@@ -9,6 +9,7 @@ import DataMap from './components/DataMap';
 import {  } from '@heroicons/react/20/solid';
 import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
+const axios = require('axios');
 
 
 const userNavigation = [
@@ -22,12 +23,33 @@ function classNames(...classes) {
 }
 
 export default function Home() {
+
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [initData, setInitData] = useState({});
   
   
   // console.log('initData variable', initData, sidebarOpen);
-    
+    //get data here, and pass it down to map.
+    const [currentCoords, setCurrentC] = useState([0,0]);
+
+    useEffect( () => {
+  
+      if (currentCoords[0] === 0) {
+  
+          axios.get('http://api.open-notify.org/iss-now.json')
+          .then( (res) => {
+              // handle success
+              setCurrentC([res.data.iss_position.latitude,res.data.iss_position.longitude]);
+          })
+          .catch((err) => {
+              // handle error
+              console.log(err);
+          })
+  
+      }
+  
+  }, [currentCoords])
+
   return (
     <div>
       <div>
@@ -98,7 +120,7 @@ export default function Home() {
           </div>
 
           <main className="flex-1">
-          <DataMap setInit={setInitData} />
+          <DataMap setInit={setInitData} currentLocation={currentCoords} />
             <div className="py-6">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
               </div>

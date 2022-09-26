@@ -11,6 +11,7 @@ import {
     UsersIcon,
     XMarkIcon,
   } from '@heroicons/react/24/outline';
+import { FaHome, FaSatellite, FaShip, FaPlane, FaGripHorizontal } from "react-icons/fa";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -20,13 +21,13 @@ function classNames(...classes) {
 function Dropdown(props) {
 
     const navigation = [
-        { name: 'All Objects', href: '#', icon: HomeIcon, current: true },
-        { name: 'ISS', href: '#', icon: UsersIcon, current: false },
-        { name: 'Planes', href: '#', icon: FolderIcon, current: false },
-        { name: 'Ships', href: '#', icon: CalendarIcon, current: false },
-        { name: 'Others', href: '#', icon: InboxIcon, current: false },
+        { name: 'All Objects', href: '#', icon: FaHome, current: true },
+        { name: 'ISS', href: '#', icon: FaSatellite, current: false },
+        { name: 'Planes', href: '#', icon: FaPlane, current: false },
+        { name: 'Ships', href: '#', icon: FaShip, current: false },
+        { name: 'Others', href: '#', icon: FaGripHorizontal, current: false },
     ]
-
+    
     return (
         <div>
             <nav className="flex-1 space-y-1 px-2 pb-4">
@@ -47,6 +48,7 @@ function Dropdown(props) {
                         aria-hidden="true"
                         />
                         {item.name}
+
                     </a>
                     ))}
                 </nav>

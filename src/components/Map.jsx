@@ -11,6 +11,8 @@ function Map(props) {
 
     const processedPosition = [parseInt(currPosition[0]), parseInt(currPosition[1])];
 
+    console.log('MAP COMPONENT', props.lineData);
+
     return (
         <div className="headerTop">
             <MapContainer center={processedPosition} zoom={2} scrollWheelZoom={true} className="mapContainer">
@@ -26,6 +28,18 @@ function Map(props) {
                     Latitude: {currPosition[1]}
                     </Popup>
                 </Marker>
+
+                {props.lineData.map((item) => {
+
+                    console.log('item', item);
+                    return (
+                        <Marker position={[ item.latitude, item.longitude]}>was here</Marker>
+                    );
+
+
+
+                })}
+
                 </MapContainer>
         </div>
     );
