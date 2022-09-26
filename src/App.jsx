@@ -4,15 +4,17 @@ import {
   Bars3BottomLeftIcon,
   BellIcon,
   CalendarIcon,
-  ChartBarIcon,
+  // ChartBarIcon,
   FolderIcon,
   HomeIcon,
   InboxIcon,
   UsersIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+  MegaphoneIcon,
+} from '@heroicons/react/24/outline';
+// import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import DataMap from './components/DataMap';
+import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
 
 const navigation = [
   { name: 'All Objects', href: '#', icon: HomeIcon, current: true },
@@ -34,6 +36,11 @@ function classNames(...classes) {
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
+  const stats = [
+    { stat: 'International Space Station'},
+    { stat: 'Current Velocity: ', previousStat: '70,946' },
+    { stat: 'Time zone: ', previousStat: '56.14%' },
+  ]
 
   const [initData, setInitData] = useState({});
 
@@ -167,9 +174,24 @@ export default function Home() {
         </div>
         
         <div className="flex flex-1 flex-col md:pl-64">
-          <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
-            
           
+          <div className="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white shadow">
+            {/* //Current Vewlocity, Time Zone, and others.----------------------------------------------------------------------------------- */}
+            <div>
+              <dl className=" grid grid-cols-1 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:grid-cols-3 md:divide-y-0 md:divide-x">
+                {stats.map((item) => (
+                  <div key={item.name} className="px-4 py-0 sm:p-4">
+                    <dd className=" flex items-baseline justify-between md:block lg:flex">
+                      <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
+                        {item.stat}
+                        <span className="ml-2 text-sm font-medium text-gray-500"> {item.previousStat}</span>
+                      </div>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+            {/* ---------------------------------------------------------------------------------------- */}
             <button
               type="button"
               className="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
@@ -182,7 +204,7 @@ export default function Home() {
               <div className="flex flex-1">
                 
 
-                <span className="flex w-full md:ml-0">Current Velocity: {parseInt(initData.velocity)} km/hr</span>
+                {/* <span className="flex w-full md:ml-0">Current Velocity: {parseInt(initData.velocity)} km/hr</span> */}
 
               </div>
               <div className="ml-4 flex items-center md:ml-6">
