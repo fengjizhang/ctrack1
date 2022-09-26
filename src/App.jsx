@@ -48,19 +48,10 @@ export default function Home() {
             </button>
             <div className="flex flex-1 justify-between px-4">
               <div className="flex flex-1">
-                
-
-                {/* <span className="flex w-full md:ml-0">Current Velocity: {parseInt(initData.velocity)} km/hr</span> */}
-
+              
               </div>
               <div className="ml-4 flex items-center md:ml-6">
-                <button
-                  type="button"
-                  className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
@@ -112,10 +103,7 @@ export default function Home() {
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
               </div>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                
-                <div className="py-4">
-                  <div className="h-96 rounded-lg border-4 border-dashed border-gray-200" />
-                </div>
+
               </div>
             </div>
           </main>
