@@ -17,9 +17,7 @@ function classNames(...classes) {
 }
 
 
-
 function Dropdown(props) {
-    
 
     const navigation = [
         { name: 'All Objects', href: '#', icon: HomeIcon, current: true },
