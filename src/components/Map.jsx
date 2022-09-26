@@ -10,8 +10,6 @@ function Map(props) {
     const currPosition = [props.data[0], props.data[1]];
 
     const processedPosition = [parseInt(currPosition[0]), parseInt(currPosition[1])];
-    
-    console.log('coordinates, chrome console.', processedPosition);
 
     return (
         <div className="headerTop">
