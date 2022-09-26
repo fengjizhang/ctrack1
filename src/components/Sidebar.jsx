@@ -1,6 +1,6 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useState, Fragment } from 'react';
 
-import { Dialog, Menu, Transition } from '@headlessui/react'
+import { Dialog, Transition } from '@headlessui/react'
 import {
   CalendarIcon,
   // ChartBarIcon,
@@ -10,7 +10,7 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { EnvelopeIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline';
+import { AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline';
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -123,11 +123,10 @@ function Sidebar(props) {
             {/* Sidebar component, swap this element with another sidebar if you like */}
             <div className="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white pt-5">
                 <div className="flex flex-shrink-0 items-center px-4">
-                <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                    alt="Your Company"
-                />
+                    <div className="text-3xl font-sans font-bold tracking-wide text-yellow-500">
+                        CTrack
+                    </div>
+                
                 </div>
                 <div className="mt-5 flex flex-grow flex-col">
                 <nav className="flex-1 space-y-1 px-2 pb-4">

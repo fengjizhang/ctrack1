@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  } from 'react';
 import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import '../cssFiles/map.css';
 // import issLogo from '../imgFiles/ISS.png';

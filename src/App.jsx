@@ -1,12 +1,12 @@
-import { useEffect, useState, Fragment } from 'react'
-import { Dialog, Menu, Transition } from '@headlessui/react'
+import {  useState, Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
 import {
   Bars3BottomLeftIcon,
   BellIcon,
 } from '@heroicons/react/24/outline';
 // import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import DataMap from './components/DataMap';
-import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
+import {  } from '@heroicons/react/20/solid';
 import Header from './components/Header.jsx';
 import Sidebar from './components/Sidebar.jsx';
 
@@ -25,6 +25,9 @@ export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [initData, setInitData] = useState({});
   
+  
+  console.log('initData variable', initData, sidebarOpen);
+    
   return (
     <div>
       <div>
