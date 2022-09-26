@@ -26,7 +26,7 @@ export default function Home() {
   const [initData, setInitData] = useState({});
   
   
-  console.log('initData variable', initData, sidebarOpen);
+  // console.log('initData variable', initData, sidebarOpen);
     
   return (
     <div>
