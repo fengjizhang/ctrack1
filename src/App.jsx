@@ -15,12 +15,11 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import DataMap from './components/DataMap';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+  { name: 'All Objects', href: '#', icon: HomeIcon, current: true },
+  { name: 'ISS', href: '#', icon: UsersIcon, current: false },
+  { name: 'Planes', href: '#', icon: FolderIcon, current: false },
+  { name: 'Ships', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Others', href: '#', icon: InboxIcon, current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
