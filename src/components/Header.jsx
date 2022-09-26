@@ -25,7 +25,7 @@ function Header() {
   } , [headerData])
 
   const stats = [
-    { name: 'International Space Station', id: 0, },
+    { name: 'Whatever object', id: 0, },
     { name: 'Current Velocity:  ', previousStat: + 'km/hr' , id: 1},
     { name: 'Time zone: ', previousStat: '56.14%' },
   ]
