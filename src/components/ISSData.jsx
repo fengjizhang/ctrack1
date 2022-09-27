@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Map from './Map.jsx';
 const axios = require('axios');
 
 const getTimestampInSeconds  = () => {
   return Math.floor(Date.now() / 1000);
 }
 
-const MapData = (props) => {
+const ISSData = (props) => {
 
   //get data here, and pass it down to map.
   let currentCoords = props.currentLocation;
@@ -30,6 +29,7 @@ const MapData = (props) => {
         .then( (res) => {
             // handle success
             // console.log('timestamps', timeStamps);
+            console.log('ASDF', res);
             //Diagnostics...
             setLineCoords(res.data);
         })
@@ -42,15 +42,7 @@ const MapData = (props) => {
 
 }, [currentCoords, timeStamps])
 
-  //All data goes into an object.
-  const allData = {iss: lineCoords};
 
-
-  return (
-    <div>
-      <Map data={currentCoords} lineData={lineCoords} all={allData}/>
-    </div>
-  );
 }
 
-export default MapData;
+export default ISSData;

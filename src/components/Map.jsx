@@ -1,5 +1,5 @@
 import React, {  } from 'react';
-import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, Polyline} from 'react-leaflet'
 import '../cssFiles/map.css';
 // import issLogo from '../imgFiles/ISS.png';
 
@@ -11,7 +11,14 @@ function Map(props) {
 
     const processedPosition = [parseInt(currPosition[0]), parseInt(currPosition[1])];
 
-    console.log('MAP COMPONENT', props.lineData);
+    const allData = [];
+    props.lineData.map((item) => {
+        allData.push([item.latitude, item.longitude]);
+    });
+
+    console.log(allData);
+
+    const greenOptions = { color: 'green' }   //line color
 
     return (
         <div className="headerTop">
@@ -28,17 +35,12 @@ function Map(props) {
                     Latitude: {currPosition[1]}
                     </Popup>
                 </Marker>
-
-                {props.lineData.map((item) => {
-
-                    console.log('item', item);
+                <Polyline pathOptions={greenOptions} positions={allData} />
+                {/* {allData[0].map((item) => {
                     return (
                         <Marker position={[ item.latitude, item.longitude]}>was here</Marker>
                     );
-
-
-
-                })}
+                })} */}
 
                 </MapContainer>
         </div>
