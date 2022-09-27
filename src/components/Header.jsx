@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 
 const axios = require('axios');
 
-function Header() {
+const Header = () => {
 
   const [headerData, setPrelimData] = useState({});
   
 
   useEffect( () => {
-    const temp = {};
+    const temp = {one: {}, two: {}};
     if (Object.keys(headerData).length === 0) {
 
         axios.get('https://api.wheretheiss.at/v1/satellites/25544')
@@ -16,13 +16,21 @@ function Header() {
             // handle success
             console.log('header', res.data);
             setPrelimData(res.data);
+            temp['one'] = res.data;
+        }).then(() => {
+          axios.get('https://api.wheretheiss.at/v1/coordinates/37.795517,-122.393693')
+          .then( (res) => {
+            console.log('one', temp);
+            console.log('two', res);
+
+          }).catch((err) => {
+            console.log(err);
+          })
         })
         .catch((err) => {
             // handle error
             console.log(err);
         })
-
-
     }
 
   } , [headerData])
@@ -47,8 +55,7 @@ function Header() {
                 {item.id === 2 ? <div><span className=""> &nbsp; {item.name} {item.location}</span></div> : null}
               </div>
             </dd>
-          </div>
-          
+          </div> 
         ))}
         <div key="countryLocation" className="px-4 py-0 sm:p-4">
             <dd className=" flex items-baseline justify-between md:block lg:flex">

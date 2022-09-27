@@ -1,6 +1,7 @@
 import React, {  } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, Polyline} from 'react-leaflet'
 import '../cssFiles/map.css';
+import {ISSIcon} from './ISSIcon';
 // import issLogo from '../imgFiles/ISS.png';
 
 
@@ -16,8 +17,6 @@ function Map(props) {
         allData.push([item.latitude, item.longitude]);
     });
 
-    console.log(allData);
-
     const greenOptions = { color: 'green' }   //line color
 
     return (
@@ -27,8 +26,9 @@ function Map(props) {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={processedPosition}>
-                    
+                <Marker 
+                    position={processedPosition}>
+                    {/* icon={ISSIcon} */}
                     <Popup>
                     International Space Station<br /> 
                     Longitude: {currPosition[0]} <br />
