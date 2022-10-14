@@ -10,7 +10,7 @@ The map technology used in this project is leafletjs. Its performance, lightweig
 
 Currently Implementing a backend database using MongoDB to add more customization features to see, objects , one/multiple, show/hide future/tracks. 
 
-Expected technologies used on completion: ReactJS, NodeJS, MongoDB, Front-End, Back-End. 
+Technologies used: React, Node, MySQL. 
 
 ## Available Scripts
 
