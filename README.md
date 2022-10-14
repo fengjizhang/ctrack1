@@ -14,11 +14,14 @@ Expected technologies used on completion: ReactJS, NodeJS, MongoDB, Front-End, B
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, run:
 
+To initialize and start website.
 ### `npm install`
 
 ### `npm start`
 
+To start server
+node app.js
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
