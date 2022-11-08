@@ -1,6 +1,13 @@
 # Getting Started with CTrack. 
 
+Next update:
 -GUI overhaul in progress-
+-Phone tracking utilizing mobile app-
+
+Future functionalities:
+-Ship route tracking-
+-Airplane route tracking-
+
 
 This project is a work in progress...
 CTrack visualizes the path, past and future, of objects in the sky/space on a map. 
