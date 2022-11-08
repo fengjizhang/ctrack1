@@ -1,12 +1,12 @@
 # Getting Started with CTrack. 
 
-Next update:
--GUI overhaul in progress-
--Phone tracking utilizing mobile app-
+Next update:</br>
+-GUI overhaul in progress-</br>
+-Phone tracking utilizing mobile app-</br>
 
-Future functionalities:
--Ship route tracking-
--Airplane route tracking-
+Future functionalities:</br>
+-Ship route tracking-</br>
+-Airplane route tracking-</br>
 
 
 This project is a work in progress...
