@@ -38,9 +38,9 @@ const Header = () => {
 
 
   const stats = [
-    { name: 'Whatever object', id: 0, },
+    { name: 'ISS', id: 0, },
     { name: 'Current Velocity:  ', previousStat: + 'km/hr' , id: 1},
-    { name: 'Location: ', location: 'america', id:2}, 
+    { name: 'Time Zone: ', location: 'Brazil', id:2}, 
   ]
 
   return (
