@@ -1,4 +1,4 @@
-# Getting Started with CTrack. 
+# CTrack
 
 Next update:</br>
 -Map changes: Adding in more objects to track.-</br>
@@ -19,6 +19,8 @@ The map technology used in this project is leafletjs. Its performance, lightweig
 Currently Implementing a backend database using MongoDB to add more customization features to see, objects , one/multiple, show/hide future/tracks. 
 
 Technologies used: React, Node, MongoDB. 
+
+# Getting Started with CTrack. 
 
 ## Available Scripts
 
