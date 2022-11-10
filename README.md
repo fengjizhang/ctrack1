@@ -1,6 +1,7 @@
 # Getting Started with CTrack. 
 
 Next update:</br>
+-Map changes: Adding in more objects to track.
 -GUI overhaul in progress-</br>
 -Phone tracking utilizing mobile app-</br>
 
