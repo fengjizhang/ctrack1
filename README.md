@@ -11,6 +11,9 @@ Currently Implementing a backend database using MongoDB to add more customizatio
 
 Technologies used: React, Node, MongoDB. 
 
+Here are some photos of the app.![Screenshot from 2022-11-08 13-56-03](https://user-images.githubusercontent.com/99811913/200651561-d1129ff6-7f31-4344-85dc-5c613c835123.png)
+
+
 Next update:</br>
 -Map changes: Adding in more objects to track.-</br>
 -GUI overhaul in progress-</br>
@@ -39,5 +42,3 @@ To start server
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-Here are some photos of the app.![Screenshot from 2022-11-08 13-56-03](https://user-images.githubusercontent.com/99811913/200651561-d1129ff6-7f31-4344-85dc-5c613c835123.png)
