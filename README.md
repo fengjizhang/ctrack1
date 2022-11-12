@@ -15,6 +15,8 @@ Here are some photos of the app.![Screenshot from 2022-11-08 13-56-03](https://u
 
 
 Next update:</br>
+-Bug: More accurate lines/marker</br>
+    : Timezone migrate to local database.
 -Map changes: Adding in more objects to track.-</br>
 -GUI overhaul in progress-</br>
 -Phone tracking utilizing mobile app-</br>
