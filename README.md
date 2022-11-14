@@ -14,16 +14,18 @@ Technologies used: React, Node, MongoDB.
 Here are some photos of the app.![Screenshot from 2022-11-08 13-56-03](https://user-images.githubusercontent.com/99811913/200651561-d1129ff6-7f31-4344-85dc-5c613c835123.png)
 
 
-Next update:</br>
--Bug: More accurate lines/marker</br>
-    : Timezone migrate to local database.
--Map changes: Adding in more objects to track.-</br>
--GUI overhaul in progress-</br>
--Phone tracking utilizing mobile app-</br>
+# Next update:
+-Bug: Fix accuracy of marker at end of line.</br>
+-Timezone migrate to local database.</br>
+-GUI changes</br>
+-Database Migration</br>
 
 Future functionalities:</br>
 -Ship route tracking-</br>
 -Airplane route tracking-</br>
+-Phone tracking utilizing mobile app-</br>
+-Map changes: Adding in more objects to track.-</br>
+-Deployment-</br>
 
 
 
